@@ -1,62 +1,56 @@
-### How to setup emacs
-1. Create a dir ```.emacs.d```, and copy content of this folder in that folder.
-2. When you start emacs then it will install everything.
-3. First time - M-x list all packages (package-install does not list it and you will have do to it manually) => install "doom-theams" => restart 
+### Setup Help
+This is a custom Emacs setup for my own use. I has the followign setup:
+1. Create ~/.emacs.d directory and ```git clone https://github.com/devlibx/emacs.git .```
+2. When it boots it will install any package which is neede. If this is fresh setup then it will take some time but it will setup all packages automatically.
+3. Only one step is need at first time (Because i am using `doom-emacs` theam)
+   ```shell
+   # Install doom-emacs:
+   M-x package-list-packages => Search for "doom-theams" => Install
+
+   # Note it is possible  you may not see "doom-theams" directly from M-x package-install. So use these steps.
+   ``` 
+
+We have also installed dap-mode which neds lldb installed. For OSX do ```brew install llvm```, and run the following command
+```shell
+ln -s $(brew --prefix)/opt/llvm/bin/lldb-vscode $(brew --prefix)/bin/
+
+Make sure the path in setup.el file: Given below is the snippet from current setup.el file
+;; Content from setup.el file => Install DAP mode for debug
+(use-package dap-mode
+      :ensure t
+      :config
+      (setq dap-lldb-debug-program '("/usr/local/bin/lldb-vscode")))
+```
 
 ---
 
-### Packages installed 
-Incase your setup Emaca again then ensure your have these packages installed. It should automatically set-up things.
+#### Emacs and C++ Etags
+Here some useful instruction to work with C++ projects. Yon can generate Etags using following commands and use Emacs shortcut keys to jump accross code.
 
 ```shell
-# This is just a backou to setup fresh
+# Generate etags for C++ project - this will generate TAGS file 
+>> find . -name "*.cpp" -print -or -name "*.h" -print | xargs etags --append
 
-# Auto complete help - this will give help as your type
-company
+Now you can use Etags to navigate code:
+Jump to def                =  M-.
+Go back                    =  M-,
+List all tags with name    =  M-?
 
-# M-x auto complete help - this will help as tou type M-x command
-smex
-
-# Installed LLDB debuger - Forgot LLDB your need to installed DAP
-dap-mode
- -> This should install lldb also
- -> In theam config file your will see we are setting "/usr/local/bin/lldb-vscode". This is needed forgot LLDb debuger
- -> Your will have in install lldb debuger. In case of Max installed "brew install llvm"
- -> The following was need to bind lldb-vscode command as a soft link
- -> ln -s $(brew --prefix)/opt/llvm/bin/lldb-vscode $(brew --prefix)/bin/
-
+# For the first time you may have to point to TAGS file. It will be on the root of your project where you ran etags command.
 ```
+<br>
 
-### Emacs and C++ ETAGS
+Adding system files to etags:
+When you run ETAGs in your directory, you will only get tags for your project. Suppose you have Go project then to generate tags from lib you will have to append tags from libs.
+
 ```shell
-# Generate etags for C++ project
-# This will generate TAGS file 
-
-find . -name "*.cpp" -print -or -name "*.h" -print | xargs etags --append
-
-
-# Nowin emacs "Meta and ."
-M-. => First time point to the TAGS file which will be at the root of this project
-
-Next time you can use jump and other munction e.g. M-. will jump to the def of the func
-
-
-# Few commands
-Jump to def =  M-.
-Go back     =  M-,
-List all tags with name   =  M-?
-
-
-# When you run ETAGs in your directory, you will only get tags for your project. Suppose you have Go project
-# To generate tags from lib you will have to append tags from libs also
-# For example this will pick all go files in libs and will add tags to your etags file
-
-
-find ~/go/ -type f -name "*.go" | xargs etags --append
-
+#For example this will pick all go files in libs and will add tags to your etags file
+>> find ~/go/ -type f -name "*.go" | xargs etags --append
 ```
 
-### Command Help
+---
+
+### Some comman commands
 
 Important:
 Time to time some old packages may be removed and if you setup this Emacs in new system you may have to do following
@@ -119,28 +113,9 @@ Tab onf anything with ... => this will epxand it
 ? on magit =? this will show all option e.g. stash/push/fetch
 s/u => stash or unstash a file
 
-
 How to commit using Magit:
 M-x magit-commit
     - Stage files and now you must add some comments and to continue with commit C-c C-x
 	- This will commit the code
 M-x magit-push => p
-
-
-# Multi cursor
-# https://github.com/magnars/multiple-cursors.el
-Select a word => M-x mark-all-works-like-this
-
-# Work with multi-line ( C-x l)
-Select => M-x mc/edit-lines => Do anything
-	e.g. M-x ms/insert-numbers
-
-# Display line numbers
-M-x global-display-line-numbers-mode
-	
-		# Or in your init file add following
-  	(add-hook 'prog-mode-hook 'global-display-line-numbers-mode)
-
-# Change theam -> dont forgot to save it (ther is save setting hyperlink"
-M-x customize-themes
 ```
