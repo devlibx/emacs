@@ -30,6 +30,9 @@
   (let ((deactivate-mark t))
     (call-process-region (point) (mark) "pbcopy")))
 
+;; Enlarge window
+(defun inc-vertical-win-size(x) (interactive "nEnter size to increase: ") (enlarge-window x))
+
 ;; ------------------------------------------------- LLDB Debugger setup ---------------------------------------------;
 (dap-register-debug-template "MySQL_Debug"
  (list :type "lldb-vscode"
