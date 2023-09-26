@@ -59,3 +59,8 @@
   :ensure t
   :config
   (global-set-key (kbd "C-x l") 'mc/edit-lines))
+
+;; Setup LSP mode for C++
+(add-hook 'c-mode-hook 'lsp)
+(add-hook 'c++-mode-hook 'lsp)
+
