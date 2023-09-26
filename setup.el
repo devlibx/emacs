@@ -60,7 +60,23 @@
   :config
   (global-set-key (kbd "C-x l") 'mc/edit-lines))
 
+;; Make sure go-mode is installed
+(use-package go-mode
+  :ensure t)
+
+;; Go testing framework
+(use-package gotest
+  :ensure t)
+
+;; Make sure yasnippet is installed - I think it is needed in Go LSP mode
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-global-mode 1))
+
+
 ;; Setup LSP mode for C++
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
+(add-hook 'go-mode-hook 'lsp)
 
