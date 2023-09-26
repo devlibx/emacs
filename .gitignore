@@ -1,0 +1,13 @@
+.emacs
+projects
+elpa
+auto-save-list/
+*~
+ac-comphist.dat
+transient/history.el
+ido.last
+smex-items
+.cache/treemacs-persist
+.dap-breakpoints
+.mc-lists.el
+.cache
