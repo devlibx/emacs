@@ -33,6 +33,12 @@
 ;; Enlarge window
 (defun inc-vertical-win-size(x) (interactive "nEnter size to increase: ") (enlarge-window x))
 
+;; Helper to format json and copy to clipboard
+(defun json-pretty-and-copy() (interactive)
+       (json-pretty-print (region-beginning) (region-end))
+       (copy)
+       )
+
 ;; ------------------------------------------------- LLDB Debugger setup ---------------------------------------------;
 (dap-register-debug-template "MySQL_Debug"
  (list :type "lldb-vscode"
