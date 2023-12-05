@@ -11,7 +11,8 @@ This is a custom Emacs setup for my own use. I has the followign setup:
 
 ```
 
-4. (Opetilal) For go projects you will have to install gopls - make sure your adding ~/go/bin/ to your $PATH also
+4. (Optional) For go projects you will have to install gopls - make sure your adding ~/go/bin/ to your $PATH also
+
    ```shell
    go install golang.org/x/tools/gopls@latest
    
