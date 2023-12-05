@@ -14,6 +14,7 @@ This is a custom Emacs setup for my own use. I has the followign setup:
 4. (Opetilal) For go projects you will have to install gopls - make sure your adding ~/go/bin/ to your $PATH also
    ```shell
    go install golang.org/x/tools/gopls@latest
+   
    ```
 
 We have also installed dap-mode which neds lldb installed. For OSX do ```brew install llvm```, and run the following command
