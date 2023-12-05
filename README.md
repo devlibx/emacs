@@ -8,7 +8,12 @@ This is a custom Emacs setup for my own use. I has the followign setup:
    M-x package-list-packages => Search for "doom-theams" => Install
 
    # Note it is possible  you may not see "doom-theams" directly from M-x package-install. So use these steps.
-   ``` 
+
+```
+4. (Opetilal) For go projects you will have to install gopls - make sure your adding ~/go/bin/ to your $PATH also
+```
+go install golang.org/x/tools/gopls@latest
+```
 
 We have also installed dap-mode which neds lldb installed. For OSX do ```brew install llvm```, and run the following command
 ```shell
