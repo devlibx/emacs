@@ -17,6 +17,9 @@
 ;; A shortcut for kill all buffer 
 (defun kab () (interactive) (kill-all-buffers))
 
+;; A shortcut for kill buffer 
+(defun kb () (interactive) (kill-buffer))
+
 ;; Git command short-cuts
 (defun commit () (interactive) (magit-commit-create))
 ;; (defun push () (interactive) (magit-push-current-to-pushremote nil))
