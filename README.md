@@ -141,4 +141,9 @@ M-x magit-commit
     - Stage files and now you must add some comments and to continue with commit C-c C-x
 	- This will commit the code
 M-x magit-push => p
+
+Revert change in file:
+M-x magit-status
+ -> select file and "k"
+
 ```
