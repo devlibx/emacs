@@ -67,6 +67,10 @@ M-x package-refresh-contents
 
 
 ```shell
+Help to get keys info:
+C-h k
+=> Now your can type type the key and get the help
+
 # C - means the control key (left most)
 # M - option key (cenete)
 # Command - (right key)
