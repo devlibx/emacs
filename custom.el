@@ -20,6 +20,9 @@
 ;; A shortcut for kill buffer 
 (defun kb () (interactive) (kill-buffer))
 
+;; A shortcut finding all references using lsp
+(defun ref () (interactive) (lsp-find-references))
+
 ;; Git command short-cuts
 (defun commit () (interactive) (magit-commit-create))
 ;; (defun push () (interactive) (magit-push-current-to-pushremote nil))
