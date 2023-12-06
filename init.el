@@ -29,3 +29,4 @@
 (load-file "~/.emacs.d/custom.el")
 (load-file "~/.emacs.d/custom-shell.el")
 (load-file "~/.emacs.d/treemacs.el")
+(load-file "~/.emacs.d/key.el")
