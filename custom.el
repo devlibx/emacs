@@ -39,6 +39,11 @@
        (copy)
        )
 
+;; Adding C-c p as the base keys for porjectile 
+(require 'projectile)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-mode +1)
+
 ;; ------------------------------------------------- LLDB Debugger setup ---------------------------------------------;
 (dap-register-debug-template "MySQL_Debug"
  (list :type "lldb-vscode"

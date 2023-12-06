@@ -94,6 +94,14 @@ C-x o => Jump to next buffer
 C-x 2 => Split vertical
 C-x 3 => Split hor
 
+# Project
+Integration of projectile is done
+C-c p => this is theam base keys for all commands
+ 
+    Open file from projetc -> C-c p f
+	Run grep on project    -> C-c p g
+	
+ 
 
 # Region
 C-space => Set region start
