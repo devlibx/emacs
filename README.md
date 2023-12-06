@@ -71,6 +71,10 @@ Help to get keys info:
 C-h k
 => Now your can type type the key and get the help
 
+# Fast navigation in code -> your can jump in code faster with these keys
+M-e => end of next block
+M-a => begining of next block
+
 # C - means the control key (left most)
 # M - option key (cenete)
 # Command - (right key)
