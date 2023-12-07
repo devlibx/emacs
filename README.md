@@ -15,6 +15,9 @@ This is a custom Emacs setup for my own use. I has the followign setup:
 
    ```shell
    go install golang.org/x/tools/gopls@latest
+   
+   # Added this file to a folder ~/.emacs.d/lisp/dap-mode/ 
+   wget https://raw.githubusercontent.com/emacs-lsp/dap-mode/master/dap-dlv-go.el
    ```
 
 We have also installed dap-mode which neds lldb installed. For OSX do ```brew install llvm```, and run the following command
