@@ -74,6 +74,13 @@
   :config
   (yas-global-mode 1))
 
+;; Setup lsp-ui configs
+(use-package lsp-ui
+  :ensure t
+  :config
+  ;; This will enable then symbol info when we hover on then code
+  (setq lsp-ui-sideline-show-hover t)
+)
 
 ;; Setup LSP mode for C++
 (add-hook 'c-mode-hook 'lsp)

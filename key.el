@@ -13,8 +13,6 @@
 			  (local-set-key (kbd "M-t") 'go-test-current-test)
 			  (local-set-key (kbd "M-T") 'go-test-current-file)))
 
-;; Go stuff
-(defun go-sym-info ()
-  "Enable sideline info to give more details when we hover on top of the code"
-  (interactive)
-  (lsp-ui-sideline-toggle-symbols-info))
+;; Enable symbol info on hover
+;; This will enable lsp-ui-sideline-toggle-info
+(setq lsp-ui-sideline-show-hover t)
