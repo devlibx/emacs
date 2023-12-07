@@ -3,6 +3,11 @@
 (global-set-key (kbd "ESC <up>") 'backward-paragraph)
 (global-set-key (kbd "ESC <down>") 'forward-paragraph)
 
+;; Scale up/down window size
+(global-set-key (kbd "M-+") (lambda () (interactive) (enlarge-window 1)))
+(global-set-key (kbd "M-_") (lambda () (interactive) (enlarge-window -1)))
+
+
 ;; lsp-find-references - Meta-Shift (. or >)
 ;; Use M-. to find the source of the symobl. If you want to find all the
 ;; places wehre this symbol is used then used this

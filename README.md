@@ -77,6 +77,8 @@ C-h k
 # Fast navigation in code -> your can jump in code faster with these keys
 M-e => end of next block
 M-a => begining of next block
+M-+ => Window size increase (Note my keyboard needs shift key to get +) 
+M-_ => Winow size increase  (Note my keyboard needs shift key to gethash _ => it does note need shift to do - and to keep in same I used _)
 
 Golang:
 M-t => run current test
