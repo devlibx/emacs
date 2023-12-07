@@ -9,6 +9,12 @@
 (global-set-key (kbd "M->") 'lsp-find-references)
 
 ;; Run current test in go using this
-(add-hook 'go-mode-hook (lambda ()
+(add-hook 'go-mode-hook (lambda () 
 			  (local-set-key (kbd "M-t") 'go-test-current-test)
 			  (local-set-key (kbd "M-T") 'go-test-current-file)))
+
+;; Go stuff
+(defun go-sym-info ()
+  "Enable sideline info to give more details when we hover on top of the code"
+  (interactive)
+  (lsp-ui-sideline-toggle-symbols-info))
