@@ -164,4 +164,8 @@ C-h k => then press theam key
 
 C-h m => show all keys mapping in this mode (it will show the mode specific things)
 
+# Go debugging
+M-n => Next
+M-N => Step In
+
 ```

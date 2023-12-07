@@ -11,8 +11,14 @@
 ;; Run current test in go using this
 (add-hook 'go-mode-hook (lambda () 
 			  (local-set-key (kbd "M-t") 'go-test-current-test)
-			  (local-set-key (kbd "M-T") 'go-test-current-file)))
+			  (local-set-key (kbd "M-T") 'go-test-current-file)
+
+			  ;; Debug related keys
+			  (local-set-key (kbd "M-n") 'dap-next)
+			  (local-set-key (kbd "M-N") 'dap-step-in)
+))
 
 ;; Enable symbol info on hover
 ;; This will enable lsp-ui-sideline-toggle-info
 (setq lsp-ui-sideline-show-hover t)
+
