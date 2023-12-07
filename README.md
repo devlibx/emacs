@@ -151,3 +151,14 @@ M-x magit-status
  -> select file and "k"
 
 ```
+
+
+### Some more help
+```shell
+
+# What action is with this key:
+C-h k => then press theam key
+
+C-h m => show all keys mapping in this mode (it will show the mode specific things)
+
+```
