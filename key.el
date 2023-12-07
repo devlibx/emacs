@@ -27,3 +27,7 @@
 ;; This will enable lsp-ui-sideline-toggle-info
 (setq lsp-ui-sideline-show-hover t)
 
+;; This is a useful hook
+;; Whenever we get a brakpoint the hydra will come-up to give debug keys
+(add-hook 'dap-stopped-hook
+	  (lambda (arg) (call-interactively #'dap-hydra)))
