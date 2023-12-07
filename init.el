@@ -23,6 +23,9 @@
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 (package-initialize)
 
+;; Dap lisp
+(add-to-list 'load-path "~/.emacs.d/lisp/dap-mode/")
+
 ;; Load all other config files here
 (load-file "~/.emacs.d/look.el")
 (load-file "~/.emacs.d/setup.el")

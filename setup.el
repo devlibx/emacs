@@ -81,4 +81,4 @@
 (add-hook 'go-mode-hook 'lsp)
 
 
-
+(require 'dap-dlv-go)
