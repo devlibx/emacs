@@ -6,6 +6,9 @@
 (require 'ido)
 (ido-mode 1)
 
+;; I want to use M-t to run tests in go
+(global-unset-key (kbd "M-t"))
+
 ;; This will disable auto save to avoid creating #..# files
 (auto-save-mode -1)
 (setq auto-save-default nil
@@ -79,4 +82,6 @@
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'lsp)
 (add-hook 'go-mode-hook 'lsp)
+
+
 

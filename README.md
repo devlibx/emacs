@@ -75,6 +75,10 @@ C-h k
 M-e => end of next block
 M-a => begining of next block
 
+Golang:
+M-t => run current test
+M-T => Run tests in file (M-shift-t)
+am
 # C - means the control key (left most)
 # M - option key (cenete)
 # Command - (right key)
