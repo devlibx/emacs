@@ -6,8 +6,8 @@
 ;; Scale up/down window size
 (global-set-key (kbd "M-+") (lambda () (interactive) (enlarge-window 1)))
 (global-set-key (kbd "M-_") (lambda () (interactive) (enlarge-window -1)))
-(global-set-key (kbd "M-[") (lambda () (interactive) (enlarge-window-horizontally 1)))
-(global-set-key (kbd "M-]") (lambda () (interactive) (enlarge-window-horizontally -1)))
+;; (global-set-key (kbd "M-[") (lambda () (interactive) (enlarge-window-horizontally 1)))
+;; (global-set-key (kbd "M-]") (lambda () (interactive) (enlarge-window-horizontally -1)))
 
 
 ;; lsp-find-references - Meta-Shift (. or >)
