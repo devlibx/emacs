@@ -10,3 +10,6 @@
 ;; Configs related to Debug UI
 ;; In dapui debug mode do do note show all windows 
 (setq dap-auto-configure-features '(controls))
+
+;; Enable indent mode by default
+(setq org-indent-mode t)
