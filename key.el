@@ -33,3 +33,9 @@
 ;; Whenever we get a brakpoint the hydra will come-up to give debug keys
 (add-hook 'dap-stopped-hook
 	  (lambda (arg) (call-interactively #'dap-hydra)))
+
+;; Bind C-z with undo
+(global-set-key (kbd "C-z") (lambda () (interactive) (undo)))
+
+;; Brign spell menu
+(global-set-key (kbd "C-q") (lambda () (interactive) (flyspell-correct-word-before-point)))
