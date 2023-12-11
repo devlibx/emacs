@@ -9,6 +9,7 @@
 ;; This will remove *<>* when we make something bold
 (setq org-hide-emphasis-markers t)
 (setq org-indent-mode t)
+(setq org-startup-indented t)
 
 ;; Use  dot instead of list
 (font-lock-add-keywords 'org-mode
@@ -17,12 +18,11 @@
 
 ;; This will fixed all * in all headline - we will use dot instead of * in headings
 (use-package org-bullets
-    :config
+   :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 
 ;; Dont know what it does
 (add-hook 'org-mode-hook 'visual-line-mode)
 
-;; Auto indent in org mode
-(setq org-startup-indented t)
+
