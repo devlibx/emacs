@@ -15,6 +15,14 @@
                           '(("^ *\\([-]\\) "
                              (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
+;; This will fixed all * in all headline - we will use dot instead of * in headings
 (use-package org-bullets
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+
+;; Dont know what it does
+(add-hook 'org-mode-hook 'visual-line-mode)
+
+;; Auto indent in org mode
+(setq org-startup-indented t)
