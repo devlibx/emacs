@@ -7,4 +7,3 @@
 #+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="https://raw.githubusercontent.com/devlibx/emacs/master/org/theams/theme-readtheorg/jquery.stickytableheaders.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="https://raw.githubusercontent.com/devlibx/emacs/master/org/theams/theme-readtheorg/readtheorg.js"></script>
-#+HTML_MATHJAX: path:"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"
