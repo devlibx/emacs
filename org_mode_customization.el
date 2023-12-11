@@ -5,3 +5,6 @@
 ;; All values for TODO 
 (setq org-todo-keywords
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+
+;; This will remove *<>* when we make something bold
+(setq org-hide-emphasis-markers t)
