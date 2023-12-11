@@ -1,5 +1,5 @@
-#+EXPORT_FILE_NAME: ~/Downloads/kuda/harish.html
-#+SETUPFILE: ~//.emacs.d/org/theams/theme-readtheorg/theme-readtheorg.setup
+#+EXPORT_FILE_NAME: ~/Downloads/kuda/harish1.html
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 * Export file to HTML
 - Added the above e.g. #+EXPORT_FI... and #+SETUP... in your .org file
