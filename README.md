@@ -82,6 +82,12 @@ M-_ => Winow size increase  (Note my keyboard needs shift key to gethash _ => it
 M-[ => Horizontally window increase (Note - no shift)
 M-] => Horizontally window reduce (Note - no shift)
 
+# Org Mode
+Generate HTML from .org file
+C-c C-e h h => Generate HTML
+C-c C-e h o => Generate HTML and alos opne in browse
+
+
 Golang:
 M-t => run current test
 M-T => Run tests in file (M-shift-t)
