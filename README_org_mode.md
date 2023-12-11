@@ -1,5 +1,10 @@
-#+EXPORT_FILE_NAME: /Users/harishbohara/Downloads/kuda/harish.html
-#+SETUPFILE: /Users/harishbohara/.emacs.d/org/theams/theme-readtheorg.setup
+#+EXPORT_FILE_NAME: ~/Downloads/kuda/harish.html
+#+SETUPFILE: ~//.emacs.d/org/theams/theme-readtheorg/theme-readtheorg.setup
+
+* Export file to HTML
+- Added the above e.g. #+EXPORT_FI... and #+SETUP... in your .org file
+- C-c C-e h h
+  - It will output theams single html file in export location
 
 * Style and Text Formating
   - *<>* => *Things will be bold here*
