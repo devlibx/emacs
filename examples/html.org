@@ -1,0 +1,49 @@
+#+TITLE: A example file to showcasing how to generate a html file with images
+#+EXPORT_FILE_NAME: ~/Downloads/kuda/harish1.html
+#+SETUPFILE: https://devlibx.github.io/emacs/org/theams/theme-readtheorg/theme-readtheorg.setup
+#+OPTIONS: num:nil
+
+
+
+* Main Destinaiton
+
+Nestled within a lush emerald forest, this enchanting retreat unveils a serene paradise where towering trees whisper secrets to the wind, their branches creating a verdant canopy above. A crystal-clear lake mirrors the tranquil beauty of nature, reflecting the harmonious coexistence of earth, water, and sky. The symphony of rustling leaves and the gentle lapping of the water create a soothing melody, inviting visitors to immerse themselves in the heart of this sylvan sanctuary. The picturesque haven offers a tranquil escape, where time seems to slow amid the peaceful dance of leaves and the mirrored reflection on the glassy surface of the secluded lake.
+
+#+CAPTION: Tranquil Haven: A Symphony of Trees and Lake
+#+ATTR_HTML: :width 300px
+[[~/Desktop/image_1.png]]
+
+* Whispering Pines Retreat
+Describe the idyllic scene of towering pines, their branches creating a soothing symphony as the wind rustles through. Insert for an image capturing this tranquil retreat.
+
+#+CAPTION: Tranquil Haven: A Symphony of Trees and Lake
+#+ATTR_HTML: :width 300px
+[[~/Desktop/image_1.png]]
+
+
+* Reflections on the Crystal Lake
+Explore a serene lake where the clear waters mirror the surrounding beauty. Link gefor an image capturing the mirrored reflections.
+
+#+CAPTION: Tranquil Haven: A Symphony of Trees and Lake
+#+ATTR_HTML: :width 300px
+[[~/Desktop/image_1.png]]
+
+* Canopy Cathedral: Nature's Sanctuary
+Take a journey through a verdant canopy, where ancient trees form a cathedral-like atmosphere. Insert for an image showcasing this majestic forest.
+
+#+CAPTION: Tranquil Haven: A Symphony of Trees and Lake
+#+ATTR_HTML: :width 300px
+[[~/Desktop/image_1.png]]
+
+
+* Help
+By running the following commands it will generate html in theams EXPORT_FILE_NAME location.
+Note - to try this, put a file name image_1.png in ~/Desktop/image_1.png
+#+begin_src
+  To generate html and open in browser
+  C-c C-e h o
+
+  To generate html
+  C-c C-e h h
+  
+#+end_src
