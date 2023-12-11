@@ -11,6 +11,8 @@ h1{
     font-size:175%;
     text-align: left !important;
     margin-bottom: 0.83em !important;
+    background-color: #f0f0f0; 
+    padding: 8px;
 }
 
 .subtitle{
