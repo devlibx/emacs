@@ -6,6 +6,8 @@
  '(custom-enabled-themes '(doom-challenger-deep))
  '(custom-safe-themes
    '("512ce140ea9c1521ccaceaa0e73e2487e2d3826cc9d287275550b47c04072bc4" default))
+ '(org-safe-remote-resources
+   '("\\`https://raw\\.githubusercontent\\.com\\(?:/\\|\\'\\)"))
  '(package-selected-packages
    '(gotest go-mode treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil multiple-cursors dap-mode doom-themes doom-theams projectile magit smex company)))
 

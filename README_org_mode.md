@@ -1,3 +1,6 @@
+#+EXPORT_FILE_NAME: /Users/harishbohara/Downloads/kuda/harish.html
+#+SETUPFILE: /Users/harishbohara/.emacs.d/org/theams/theme-readtheorg.setup
+
 * Style and Text Formating
   - *<>* => *Things will be bold here*
   - /<>/ => /Thing will be italic here/
