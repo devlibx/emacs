@@ -9,7 +9,7 @@
  '(org-safe-remote-resources
    '("\\`https://devlibx\\.github\\.io/emacs/org/theams/theme-readtheorg/theme-readtheorg\\.setup\\'" "\\`https://raw\\.githubusercontent\\.com\\(?:/\\|\\'\\)"))
  '(package-selected-packages
-   '(gotest go-mode treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil multiple-cursors dap-mode doom-themes doom-theams projectile magit smex company)))
+   '(org-bullets gotest go-mode treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil multiple-cursors dap-mode doom-themes doom-theams projectile magit smex company)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
