@@ -1,5 +1,6 @@
 # -*- mode: org; -*-
 
+#+OPTIONS: html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/devlibx/emacs/master/org/theams/theme-readtheorg/htmlize.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/devlibx/emacs/master/org/theams/theme-readtheorg/readtheorg.css"/>
 
