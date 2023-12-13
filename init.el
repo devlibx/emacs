@@ -16,7 +16,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(org-level-1 ((t (:inherit outline-1 :extend nil :background "gray34" :foreground "greenyellow" :overline "coral" :weight heavy)))))
 
 ;; Location to load packages
 (require 'package)
