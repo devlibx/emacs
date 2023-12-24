@@ -11,6 +11,9 @@
 (setq org-indent-mode t)
 (setq org-startup-indented t)
 
+;; Collapse all when opened
+(setq org-startup-folded t)
+
 ;; Use  dot instead of list
 (font-lock-add-keywords 'org-mode
                           '(("^ *\\([-]\\) "
