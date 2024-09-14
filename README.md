@@ -20,6 +20,15 @@ This is a custom Emacs setup for my own use. I has the followign setup:
    wget https://raw.githubusercontent.com/emacs-lsp/dap-mode/master/dap-dlv-go.el
    ```
 
+4. (Optional) For rust projects
+```shell
+# Make sure your have rust-analyzer installed
+brew install rust-analyzer
+
+# Package install - it should be there already
+M-x package-install RET rust RET
+```
+
 We have also installed dap-mode which neds lldb installed. For OSX do ```brew install llvm```, and run the following command
 ```shell
 ln -s $(brew --prefix)/opt/llvm/bin/lldb-vscode $(brew --prefix)/bin/
