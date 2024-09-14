@@ -31,6 +31,9 @@ M-x package-install RET rust RET
 
 We have also installed dap-mode which neds lldb installed. For OSX do ```brew install llvm```, and run the following command
 ```shell
+# Important - do note just follow this - figure out where is the lldb command installed. May be it is installed with name llvm. Just make sure that your 
+# have the binary configure in the followign command exists e.g. for linux it will be somewhare in /usr/local/bin/...
+der
 ln -s $(brew --prefix)/opt/llvm/bin/lldb-vscode $(brew --prefix)/bin/
 
 Make sure the path in setup.el file: Given below is the snippet from current setup.el file
