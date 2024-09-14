@@ -89,3 +89,21 @@
 
 
 (require 'dap-dlv-go)
+
+
+;; Enable rust mode
+(use-package rust-mode
+  :ensure t
+  :hook (rust-mode . my-rust-setup)
+  :config
+  (defun my-rust-setup ()
+    "Custom configurations for Rust mode."
+    (setq rust-format-on-save t)
+    ;; Add other Rust-specific settings here
+    ))
+
+(use-package lsp-mode
+  :hook ((rust-mode . lsp))
+  :commands lsp
+  :config
+  (setq lsp-rust-server 'rust-analyzer))
