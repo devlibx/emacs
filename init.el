@@ -37,3 +37,4 @@
 (load-file "~/.emacs.d/key.el")
 (load-file "~/.emacs.d/run_config.el")
 (load-file "~/.emacs.d/org_mode_customization.el")
+(load-file "~/.emacs.d/minibar.el")

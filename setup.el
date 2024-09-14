@@ -1,5 +1,4 @@
-
-					; Emable line numbers in all buffers by default
+; Emable line numbers in all buffers by default
 (add-hook 'prog-mode-hook 'global-display-line-numbers-mode)
 
 ;; Enable IDO mode - this will help with auto-complete the file path
