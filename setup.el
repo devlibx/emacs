@@ -79,6 +79,14 @@
   :config
   ;; This will enable then symbol info when we hover on then code
   (setq lsp-ui-sideline-show-hover t)
+  ;; (setq lsp-ui-doc-enable t)
+  ;; (setq lsp-ui-doc-use-childframe t)
+  ;; (setq lsp-ui-doc-use-childframe t)
+  ;; (setq lsp-ui-doc-include-signature t)
+
+  ;; When we take curson on top of symbol - it will show the doc
+  (setq lsp-ui-peek-enable t)
+  (setq lsp-ui-doc-show-with-cursor t)
 )
 
 ;; Setup LSP mode for C++
