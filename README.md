@@ -155,7 +155,7 @@ s/u => stash or unstash a file
 
 How to commit using Magit:
 M-x magit-commit
-    - Stage files and now you must add some comments and to continue with commit C-c C-x
+    - Stage files and now you must add some comments and to continue with commit C-c C-c
 	- This will commit the code
 M-x magit-push => p
 
