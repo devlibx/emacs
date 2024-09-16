@@ -4,3 +4,6 @@
 
 ;; Bind C-z with undo
 (global-set-key (kbd "C-z") (lambda () (interactive) (undo)))
+
+;; Use consult to show all project symbole
+(global-set-key (kbd "C-c s") 'consult-lsp-symbols)

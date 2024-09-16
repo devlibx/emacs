@@ -49,7 +49,9 @@
 (use-package consult-lsp
   :ensure t
   :after (consult lsp-mode)
-  :hook (lsp-mode . my-custom-lsp-consult-setup))
+  ;;  :hook (lsp-mode . my-custom-lsp-consult-setup))
+  :bind
+  (("C-c l s" . consult-lsp-symbols)))
 
 (defun my-custom-lsp-consult-setup ()
   "Set up `consult-lsp` key bindings, only when `lsp-mode` is active."

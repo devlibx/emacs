@@ -12,6 +12,15 @@
 (defun git-commit-amend () (interactive)
        (shell-command "git add .;  git commit --amend --no-edit"))
 
+;; Git command short-cuts
+(defun commit () (interactive) (magit-commit-create))
+
+;; Helper to format json and copy to clipboard
+(defun json-pretty-and-copy() (interactive)
+       (json-pretty-print (region-beginning) (region-end))
+       (copy)
+       )
+
 ;; Kill all buffer will kill all the open buffers
 ;; Here we loop through all buffers and kill them at one shot
 (defun kill-all-buffers ()
@@ -29,3 +38,5 @@
 ;; A shortcut for kill buffer 
 (defun kb () (interactive) (kill-buffer))
 
+;; A shortcut finding all references using lsp
+(defun ref () (interactive) (lsp-find-references))
