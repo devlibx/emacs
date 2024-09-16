@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
+   '(multiple-cursors magit marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -36,6 +36,7 @@
 
 ;; Add all files which needs to be laoded
 (load-file (expand-file-name "look.el" user-emacs-directory))
+(load-file (expand-file-name "setup.el" user-emacs-directory))
 (load-file (expand-file-name "key.el" user-emacs-directory))
 (load-file (expand-file-name "custom_command.el" user-emacs-directory))
 (load-file (expand-file-name "minibuffer/setup.el"))
