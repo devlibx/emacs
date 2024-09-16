@@ -14,3 +14,11 @@
                 (add-hook 'before-save-hook #'lsp-format-buffer nil 'local))))
   )
 
+
+;; Have Cargo packages
+(use-package cargo
+  :ensure t
+  :config
+  (add-hook 'rust-mode-hook 'cargo-minor-mode)
+  )
+
