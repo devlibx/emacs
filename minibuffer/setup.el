@@ -25,7 +25,7 @@
    ;;   ("M-x" . consult-M-x)
    ("C-s" . consult-line)      ;; Bind `consult-line` to `C-s` for searching text in the buffer
    ("C-x b" . consult-buffer)  ;; Bind `consult-buffer` to `C-x b` for buffer switching
-   ("C-x C-f" . consult-find)  ;; Bind `consult-find` to `C-x C-f` for file searching
+   ;; ("C-x C-f" . consult-find)  ;; Bind `consult-find` to `C-x C-f` for file searching
    ("M-g g" . consult-goto-line) ;; Bind `consult-goto-line` to `M-g g` for line navigation
    ("M-g M-g" . consult-goto-line) ;; Alternative binding for line navigation
    ("M-s f" . consult-find)    ;; Bind `consult-find` to `M-s f` for file finding
