@@ -6,9 +6,21 @@
 ;; Match parenthesis
 (electric-pair-mode 1)
 
-
-
 ;; Ensure lsp-mode recognizes Emacs Lisp
 (with-eval-after-load 'lsp-mode
   (add-to-list 'lsp-language-id-configuration
                '(emacs-lisp-mode . "emacs-lisp")))
+
+
+;; Optionally install and configure company-lsp for completion
+(use-package company
+  :ensure t
+  :config
+  (add-hook 'after-init-hook 'global-company-mode))
+
+(use-package company-lsp
+  :ensure t
+  :after company
+  :config
+  (push 'company-lsp company-backends))
+
