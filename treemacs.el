@@ -1,4 +1,4 @@
-; Treemacs 
+					; Treemacs 
 (use-package treemacs
   :ensure t
   :defer t
@@ -112,4 +112,32 @@
   :after (treemacs)
   :ensure t
   :config (treemacs-set-scope-type 'Tabs))
+
+
+(defun my/treemacs-open-current-dir ()
+  "Open Treemacs and navigate to the directory of the current buffer."
+  (interactive)
+  (require 'treemacs)
+  ;; Open Treemacs if it's not already open
+  (unless (treemacs-is-treemacs-window-selected)
+    (treemacs))
+  ;; Navigate to the directory of the current buffer if there's a file
+  (when (buffer-file-name)
+    (let ((file-dir (file-name-directory (buffer-file-name))))
+      (treemacs-find-file (expand-file-name file-dir)))))
+
+
+(defun my/treemacs-open-on-startup ()
+  "Open Treemacs on startup and navigate to the current buffer's directory."
+  (require 'treemacs)
+  ;; Open Treemacs if it's not already open
+  (unless (treemacs-get-local-window)
+    (treemacs))
+  ;; Navigate to the directory of the current buffer if there's a file
+  (when (buffer-file-name)
+    (let ((file-dir (file-name-directory (buffer-file-name))))
+      (treemacs-find-file (expand-file-name file-dir)))))
+
+;; Run the function after Emacs has finished loading
+(add-hook 'emacs-startup-hook 'my/treemacs-open-on-startup)
 
