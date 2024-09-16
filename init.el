@@ -43,5 +43,9 @@
 (load-file (expand-file-name "company.el" user-emacs-directory))
 (load-file (expand-file-name "lang/setup.el" user-emacs-directory))
 (load-file (expand-file-name "lang/elisp.el" user-emacs-directory))
+(load-file (expand-file-name "lang/java.el" user-emacs-directory))
+(load-file (expand-file-name "lang/go.el" user-emacs-directory))
+(load-file (expand-file-name "lang/rust.el" user-emacs-directory))
+(load-file (expand-file-name "lang/c.el" user-emacs-directory))
 
 
