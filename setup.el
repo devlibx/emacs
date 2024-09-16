@@ -20,3 +20,11 @@
   :config
   (setq projectile-project-search-path
 	'("/Users/harishbohara/workplace/personal" "/Users/harishbohara/workplace")))
+
+;; Show which key help
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode)
+  (setq which-key-idle-delay 0.1
+        which-key-max-description-length 20))

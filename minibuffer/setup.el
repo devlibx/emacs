@@ -57,12 +57,3 @@
   (local-set-key (kbd "C-c f s") #'consult-lsp-file-symbols)   ;; Show file symbols
   (local-set-key (kbd "C-c d") #'consult-lsp-diagnostics)   ;; Show diagnostics
   )
-
-;; Reduce delay in key presses
-(use-package key-chord
-  :ensure t
-  :config
-  ;; Enable key-chord mode
-  (key-chord-mode 1)
-  ;; Set the delay for recognizing two keys as a chord
-  (setq key-chord-two-keys-delay 0.1))
