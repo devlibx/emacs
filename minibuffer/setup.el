@@ -34,6 +34,8 @@
   :config
   (marginalia-mode))
 
+(use-package consult-lsp
+  :ensure t)
 
 ;;
 ;; (where-is 'execute-extended-command)

@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(cargo-mode cargo consult-ag tail company-lsp treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs multiple-cursors magit marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
+   '(consult-lsp cargo-mode cargo consult-ag tail company-lsp treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs multiple-cursors magit marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
