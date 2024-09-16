@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(multiple-cursors magit marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
+   '(treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs multiple-cursors magit marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -38,6 +38,7 @@
 (load-file (expand-file-name "look.el" user-emacs-directory))
 (load-file (expand-file-name "setup.el" user-emacs-directory))
 (load-file (expand-file-name "key.el" user-emacs-directory))
+(load-file (expand-file-name "treemacs.el" user-emacs-directory))
 (load-file (expand-file-name "custom_command.el" user-emacs-directory))
 (load-file (expand-file-name "minibuffer/setup.el"))
 (load-file (expand-file-name "company.el" user-emacs-directory))
