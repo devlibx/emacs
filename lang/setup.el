@@ -18,9 +18,4 @@
   :config
   (add-hook 'after-init-hook 'global-company-mode))
 
-(use-package company-lsp
-  :ensure t
-  :after company
-  :config
-  (push 'company-lsp company-backends))
 
