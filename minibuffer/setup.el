@@ -20,8 +20,8 @@
 ;; Optional: Install and configure `orderless` for better completion filtering
 (use-package orderless
   :after consult
-  :custom
-  (completion-styles '(orderless basic)))
+  :init
+  (setq completion-styles '(orderless)))
 
 ;; Optional: Install `marginalia` for enhanced annotations
 (use-package marginalia

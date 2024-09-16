@@ -17,5 +17,17 @@
   :ensure t
   :config
   (add-hook 'after-init-hook 'global-company-mode))
-)
+
+
+
+;; This will ensure that we get proper parameter completion after auto complete
+(use-package yasnippet
+  :ensure t
+  :init
+  ;; Enable yasnippet globally
+  (yas-global-mode 1)
+  :config
+  ;; Ensure yasnippet is enabled in programming modes
+  (add-hook 'prog-mode-hook #'yas-minor-mode)
+  )
 
