@@ -91,6 +91,8 @@ M-e => end of next block
 M-a => begining of next block
 M-+ => Window size increase (Note my keyboard needs shift key to get +) 
 M-_ => Winow size increase  (Note my keyboard needs shift key to gethash _ => it does note need shift to do - and to keep in same I used _)
+M-( => Window size increase horizontally
+M-) => Window size reduce horizontally
 M-[ => Horizontally window increase (Note - no shift)
     M-] => Horizontally window reduce (Note - no shift)
 

@@ -7,3 +7,10 @@
 
 ;; Use consult to show all project symbole
 (global-set-key (kbd "C-c s") 'consult-lsp-symbols)
+
+
+;; Scale up/down window size
+(global-set-key (kbd "M-+") (lambda () (interactive) (enlarge-window 1)))
+(global-set-key (kbd "M-_") (lambda () (interactive) (enlarge-window -1))) 
+(global-set-key (kbd "M-(") (lambda () (interactive) (enlarge-window-horizontally 1)))
+(global-set-key (kbd "M-)") (lambda () (interactive) (enlarge-window-horizontally -1))) 
