@@ -3,5 +3,14 @@
   :ensure t
   :hook ((rust-mode . lsp))
   :config
-  (setq lsp-rust-analyzer-server-command '("rust-analyzer")))
+
+  ;; Use rust analyzer
+  (setq lsp-rust-analyzer-server-command '("rust-analyzer"))
+
+  ;; Formate code on save with lsp-format
+  (add-hook 'lsp-mode-hook
+            (lambda ()
+              (when (eq major-mode 'rust-mode)
+                (add-hook 'before-save-hook #'lsp-format-buffer nil 'local))))
+  )
 
