@@ -3,38 +3,44 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(doom-challenger-deep))
- '(custom-safe-themes
-   '("512ce140ea9c1521ccaceaa0e73e2487e2d3826cc9d287275550b47c04072bc4" default))
- '(org-safe-remote-resources
-   '("\\`https://devlibx\\.github\\.io/emacs/org/theams/theme-readtheorg/theme-readtheorg\\.setup\\'" "\\`https://raw\\.githubusercontent\\.com\\(?:/\\|\\'\\)"))
  '(package-selected-packages
-   '(lsp-ui rust-mode org-bullets gotest go-mode treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil multiple-cursors dap-mode doom-themes doom-theams projectile magit smex company)))
-
+   '(marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-level-1 ((t (:inherit outline-1 :extend nil :background "gray34" :foreground "greenyellow" :overline "coral" :weight heavy)))))
+ )
 
-;; Location to load packages
+
+;; Initialize package sources
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
+
+;; All package sources
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+
+;; Make sure all packages are loaded
 (package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
 
-;; Dap lisp
-(add-to-list 'load-path "~/.emacs.d/lisp/dap-mode/")
+;; Install use-package for easier package management
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
 
-;; Load all other config files here
-(load-file "~/.emacs.d/look.el")
-(load-file "~/.emacs.d/setup.el")
-(load-file "~/.emacs.d/custom.el")
-(load-file "~/.emacs.d/custom-shell.el")
-(load-file "~/.emacs.d/treemacs.el")
-(load-file "~/.emacs.d/key.el")
-(load-file "~/.emacs.d/run_config.el")
-(load-file "~/.emacs.d/org_mode_customization.el")
-(load-file "~/.emacs.d/minibar.el")
+;; Use packeage must be loaded
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+;; Add all files which needs to be laoded
+(load-file (expand-file-name "look.el" user-emacs-directory))
+(load-file (expand-file-name "key.el" user-emacs-directory))
+(load-file (expand-file-name "custom_command.el" user-emacs-directory))
+(load-file (expand-file-name "minibuffer/setup.el"))
+(load-file (expand-file-name "company.el" user-emacs-directory))
+(load-file (expand-file-name "lang/setup.el" user-emacs-directory))
+(load-file (expand-file-name "lang/elisp.el" user-emacs-directory))
+
+

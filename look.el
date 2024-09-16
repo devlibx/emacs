@@ -1,15 +1,12 @@
 
-;; disable splash screen and startup message
-(setq inhibit-startup-message t) 
-(setq initial-scratch-message nil)
+;; Some simple configs
+(global-display-line-numbers-mode t) ;; Enable line number
 
-;; Set cursor color to white
-(set-cursor-color "#0000ff")
+;; Install Doom themes
+(use-package doom-themes
+  :ensure t
+  :config
+  (load-theme 'doom-challenger-deep t)
+  (doom-themes-visual-bell-config))
 
 
-;; Configs related to Debug UI
-;; In dapui debug mode do do note show all windows 
-(setq dap-auto-configure-features '(controls))
-
-;; Enable indent mode by default
-(setq org-indent-mode t)
