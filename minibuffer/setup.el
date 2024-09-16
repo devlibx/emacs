@@ -1,3 +1,14 @@
+;; Install SMEX package - it helps us to auto complete M-x command
+(use-package smex
+  :ensure t
+  :init
+  (smex-initialize)
+  :config
+  (global-set-key (kbd "M-x") 'smex)
+  (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+  )
+
 ;; Install and configure `vertico` for vertical completion
 (use-package vertico
   :init
@@ -34,8 +45,24 @@
   :config
   (marginalia-mode))
 
+;; Eanble consult-lsp to help find project symboles
 (use-package consult-lsp
-  :ensure t)
+  :ensure t
+  :after (consult lsp-mode)
+  :hook (lsp-mode . my-custom-lsp-consult-setup))
 
-;;
-;; (where-is 'execute-extended-command)
+(defun my-custom-lsp-consult-setup ()
+  "Set up `consult-lsp` key bindings, only when `lsp-mode` is active."
+  (local-set-key (kbd "C-c s") #'consult-lsp-symbols)       ;; Show workspace symbols
+  (local-set-key (kbd "C-c f s") #'consult-lsp-file-symbols)   ;; Show file symbols
+  (local-set-key (kbd "C-c d") #'consult-lsp-diagnostics)   ;; Show diagnostics
+  )
+
+;; Reduce delay in key presses
+(use-package key-chord
+  :ensure t
+  :config
+  ;; Enable key-chord mode
+  (key-chord-mode 1)
+  ;; Set the delay for recognizing two keys as a chord
+  (setq key-chord-two-keys-delay 0.1))
