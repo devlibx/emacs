@@ -2,7 +2,8 @@
 (use-package lsp-mode
   :ensure t
   :commands lsp
-  )
+  :bind (:map lsp-mode-map
+              ("M-RET" . lsp-execute-code-action)))
 
 ;; Enable lsp ui
 (use-package lsp-ui
