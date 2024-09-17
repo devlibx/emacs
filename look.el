@@ -15,7 +15,8 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-challenger-deep t)
+  ;;(load-theme 'doom-challenger-deep t)
+  (load-theme 'doom-acario-light t)
   (doom-themes-visual-bell-config))
 
 
