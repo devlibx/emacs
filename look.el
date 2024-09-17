@@ -1,4 +1,7 @@
 
+;; Auto scrool the logs[O]
+(setq compilation-scroll-output t)
+
 ;; Disable the startup screen
 (setq inhibit-startup-message t)
 
