@@ -11,7 +11,7 @@
      (dap-register-debug-template "LLDB (VS Code - New) :: Run Configuration"
                                   (list :type "lldb-vscode"					
                                         :request "launch"
-					:cwd default-directory
+					:cwd (projectile-project-root)
                                         :program (expand-file-name "target/debug/untitled" default-directory)
 					:preLaunchTask "cargo build"
                                         :name "LLDB::Run"))))
