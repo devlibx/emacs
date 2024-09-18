@@ -18,6 +18,7 @@
 (use-package projectile
   :ensure t
   :config
+  (projectile-mode +1)
   (setq projectile-project-search-path
 	'("/Users/harishbohara/workplace/personal" "/Users/harishbohara/workplace")))
 
