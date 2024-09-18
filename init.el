@@ -54,3 +54,5 @@
 (load-file (expand-file-name "lang/rust.el" emacs-base-dir))
 (load-file (expand-file-name "lang/c.el" emacs-base-dir))
 (load-file (expand-file-name "lang/yaml.el" emacs-base-dir))
+(load-file (expand-file-name "lang/dap/setup.el" emacs-base-dir))
+(load-file (expand-file-name "lang/dap/rust.el" emacs-base-dir))
