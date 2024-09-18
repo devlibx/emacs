@@ -25,7 +25,7 @@
 
 (require 'dap-mode)
 
-(defcustom dap-lldb-debug-program `(,(expand-file-name "/opt/homebrew/bin/lldb-vscode"))
+(defcustom dap-lldb-debug-program `(,(expand-file-name "/opt/homebrew/opt/llvm/bin/lldb"))
   "The path to the LLDB debugger."
   :group 'dap-lldb
   :type '(repeat string))
