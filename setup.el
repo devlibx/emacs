@@ -1,6 +1,7 @@
 
 ;; Disable making backup file
 (setq make-backup-files nil)
+(setq debug-on-error t)
 
 ;; Install Magit
 (use-package magit
