@@ -86,6 +86,13 @@ Help to get keys info:
 C-h k
 => Now your can type type the key and get the help
 
+# Code
+C-c l s => consult-lsp-symboles  => This will show all symboles in the Project
+C-c C-c C-r  => Run rust  (If you start with C-u then it will ask for user input also)
+C-c C-c C-t  => Run rust test
+ 
+
+
 # Fast navigation in code -> your can jump in code faster with these keys
 M-e => end of next block
 M-a => begining of next block
