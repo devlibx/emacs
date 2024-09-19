@@ -3,6 +3,8 @@
   :ensure t
   :hook (emacs-lisp-mode . company-mode) ;; Enable `company-mode` for Emacs Lisp mode
   :config
+  (global-company-mode)
+  
   (setq company-idle-delay 0.1)
   (setq company-minimum-prefix-length 1)
 
@@ -12,4 +14,6 @@
   (setq company-require-match nil) 
   (setq company-dabbrev-downcase nil) 
   (setq company-transformers '(company-sort-by-backend-importance)) 
-  (setq company-backends '((company-capf company-dabbrev))))
+  (setq company-backends '((company-capf company-dabbrev company-files))))
+
+

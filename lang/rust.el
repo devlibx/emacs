@@ -1,5 +1,7 @@
 ;; Install rust-mode or rustic
 (use-package rust-mode
+  :init
+  (setq rust-mode-treesitter-derive t)
   :ensure t
   :hook ((rust-mode . lsp))
   :config
