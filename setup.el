@@ -49,4 +49,4 @@
   (add-to-list 'company-files-known-files
                (expand-file-name "~/.emacs/elpa/")))
 
-(add-hook 'after-init-hook 'add-elpa-to-company-files)
+;; (add-hook 'after-init-hook 'add-elpa-to-company-files)
