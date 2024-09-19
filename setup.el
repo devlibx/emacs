@@ -42,3 +42,11 @@
 (add-hook 'find-file-hook 'update-header-line-with-file-path)
 (add-hook 'buffer-list-update-hook 'update-header-line-with-file-path)
 (add-hook 'window-configuration-change-hook 'update-header-line-with-file-path)
+
+;; Make sure all files are used by company mode to auto complete
+(defun add-elpa-to-company-files ()
+  "Add `.emacs/elpa/` to the list of directories for `company-files`."
+  (add-to-list 'company-files-known-files
+               (expand-file-name "~/.emacs/elpa/")))
+
+(add-hook 'after-init-hook 'add-elpa-to-company-files)
