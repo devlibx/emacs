@@ -1,0 +1,12 @@
+
+(require 'tree-sitter)
+(require 'tree-sitter-langs)
+(add-hook 'prog-mode-hook #'tree-sitter-mode)
+(add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
+
+
+(defun mya ()
+  (let ((a tree-sitter-node))
+    (message "this is me = o%s" a)))  ;; Corrected message function and added body for `let`
+
+(mya)

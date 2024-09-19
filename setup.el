@@ -30,3 +30,15 @@
   (which-key-mode)
   (setq which-key-idle-delay 0.1
         which-key-max-description-length 20))
+
+
+;; Show full file path in buffer
+(defun update-header-line-with-file-path ()
+  "Update the header line to show the full file path of the current buffer."
+  (setq header-line-format
+        (if (buffer-file-name)
+            (format "%s" (buffer-file-name))
+          "No file associated")))
+(add-hook 'find-file-hook 'update-header-line-with-file-path)
+(add-hook 'buffer-list-update-hook 'update-header-line-with-file-path)
+(add-hook 'window-configuration-change-hook 'update-header-line-with-file-path)
