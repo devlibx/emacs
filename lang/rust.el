@@ -12,7 +12,7 @@
   ;; Formate code on save with lsp-format
   (add-hook 'lsp-mode-hook
             (lambda ()
-              (when (eq major-mode 'rust-mode)
+              (when (derived-mode-p 'rust-mode)
                 (add-hook 'before-save-hook #'lsp-format-buffer nil 'local))))
   )
 
