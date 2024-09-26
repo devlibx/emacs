@@ -22,4 +22,11 @@
   (load-theme 'doom-acario-light t)
   (doom-themes-visual-bell-config))
 
-
+;; Cursor settings
+(set-cursor-color "#71368A")
+(use-package beacon
+  :ensure t
+  :config
+  (beacon-mode 1)
+  (setq beacon-push-mark 35)
+  (setq beacon-color "#666600"))
