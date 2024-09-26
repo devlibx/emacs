@@ -1,6 +1,7 @@
 
 ;; Disable making backup file
 (setq make-backup-files nil)
+(setq auto-save-default nil)  ;; Disable auto-save
 ;; (setq debug-on-error t)
 
 ;; Install Magit
