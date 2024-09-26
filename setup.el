@@ -50,3 +50,12 @@
                (expand-file-name "~/.emacs/elpa/")))
 
 ;; (add-hook 'after-init-hook 'add-elpa-to-company-files)
+
+
+;; Spelling check
+(setq ispell-program-name "ispell")
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (flyspell-prog-mode)
+            (flyspell-buffer)))
