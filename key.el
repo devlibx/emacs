@@ -14,3 +14,6 @@
 (global-set-key (kbd "M-_") (lambda () (interactive) (enlarge-window -1))) 
 (global-set-key (kbd "M-(") (lambda () (interactive) (enlarge-window-horizontally 1)))
 (global-set-key (kbd "M-)") (lambda () (interactive) (enlarge-window-horizontally -1))) 
+
+;; Open eldoc - this will popup the information about the symbol 
+(define-key global-map (kbd "M-/") 'eldoc)
