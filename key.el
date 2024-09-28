@@ -17,3 +17,6 @@
 
 ;; Open eldoc - this will popup the information about the symbol 
 (define-key global-map (kbd "M-/") 'eldoc)
+
+;; Change the behavior of C-k to kill the whole line
+(global-set-key (kbd "C-k") 'kill-whole-line)
