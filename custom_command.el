@@ -40,3 +40,9 @@
 
 ;; A shortcut finding all references using lsp
 (defun ref () (interactive) (lsp-find-references))
+
+;; Define the interactive command
+(defun my/spell ()
+  "Invoke flyspell-correct-wrapper."
+  (interactive)
+  (flyspell-correct-wrapper))
