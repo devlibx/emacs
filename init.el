@@ -48,6 +48,7 @@
 (load-file (expand-file-name "custom_command.el" emacs-base-dir))
 (load-file (expand-file-name "minibuffer/setup.el" emacs-base-dir))
 (load-file (expand-file-name "company.el" emacs-base-dir))
+(load-file (expand-file-name "org.el" emacs-base-dir))
 (load-file (expand-file-name "lang/setup.el" emacs-base-dir))
 (load-file (expand-file-name "lang/lsp.el" emacs-base-dir))
 (load-file (expand-file-name "lang/elisp.el" emacs-base-dir))

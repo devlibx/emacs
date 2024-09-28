@@ -31,3 +31,14 @@
 ;; Dont know what it does
 (add-hook 'org-mode-hook 'visual-line-mode)
 
+
+;; Customize org-mode heading faces (background colors for different levels)
+(custom-set-faces
+ ;; Customize level 1 heading (most prominent)
+ '(org-level-1 ((t (:background "LightSteelBlue1" :foreground "black" :weight bold :height 1.3))))
+ ;; Customize level 2 heading
+ '(org-level-2 ((t (:background "honeydew2" :foreground "black" :weight bold :height 1.2))))
+ ;; Customize level 3 heading
+ '(org-level-3 ((t (:background "lemonchiffon1" :foreground "black" :weight bold :height 1.1))))
+ ;; Customize level 4 heading
+ '(org-level-4 ((t (:background "mistyrose" :foreground "black" :weight bold :height 1.05)))))
