@@ -1,13 +1,13 @@
 ;; Install SMEX package - it helps us to auto complete M-x command
-(use-package smex
-  :ensure t
-  :init
-  (smex-initialize)
-  :config
-  (global-set-key (kbd "M-x") 'smex)
-  (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-  )
+;; (use-package smex
+;;   :ensure t
+;;   :init
+;;   (smex-initialize)
+;;   :config
+;;   (global-set-key (kbd "M-x") 'smex)
+;;   (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;;   (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;;   )
 
 ;; Install and configure `vertico` for vertical completion
 (use-package vertico
