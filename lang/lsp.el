@@ -3,19 +3,20 @@
   :ensure t
   :commands lsp
   :custom
-  (lsp-rust-analyzer-cargo-watch-command "clippy")
   (lsp-eldoc-render-all t)
   (lsp-idle-delay 0.6)
-  (lsp-inlay-hint-enable t) 
-  (lsp-rust-analyzer-display-lifetime-elision-hints-enable "skip_trivial")
-  (lsp-rust-analyzer-display-chaining-hints t)
-  (lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names nil)
-  (lsp-rust-analyzer-display-closure-return-type-hints t)
-  (lsp-rust-analyzer-display-parameter-hints nil)
-  (lsp-rust-analyzer-display-reborrow-hints nil)
+  (lsp-inlay-hint-enable t)
+
+  ;; Commented following to use rustic - (29 Sept 2024 - TODO delete)
+  ;; (lsp-rust-analyzer-display-lifetime-elision-hints-enable "skip_trivial")
+  ;; (lsp-rust-analyzer-display-chaining-hints t)
+  ;; (lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names nil)
+  ;; (lsp-rust-analyzer-display-closure-return-type-hints t)
+  ;; (lsp-rust-analyzer-display-parameter-hints nil)
+  ;; (lsp-rust-analyzer-display-reborrow-hints nil)
   
-  :bind (:map lsp-mode-map
-              ("M-RET" . lsp-execute-code-action)))
+  :bind
+  (:map lsp-mode-map ("M-RET" . lsp-execute-code-action)))
 
 ;; When we hover on a symbol we get the documentation for the symbol
 ;; This setting will set the delay for open it.
