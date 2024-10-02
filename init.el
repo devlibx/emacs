@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(doom-acario-light))
  '(custom-safe-themes
-   '("a138ec18a6b926ea9d66e61aac28f5ce99739cf38566876dc31e29ec8757f6e2" default))
+   '("4e2e42e9306813763e2e62f115da71b485458a36e8b4c24e17a2168c45c9cf9d" "a138ec18a6b926ea9d66e61aac28f5ce99739cf38566876dc31e29ec8757f6e2" default))
  '(package-selected-packages
    '(beacon yaml-mode vertico-posframe key-chord consult-lsp cargo-mode cargo consult-ag tail company-lsp treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs multiple-cursors magit marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
 (custom-set-faces
@@ -16,6 +16,7 @@
  '(completions-common-part ((t nil)))
  '(flycheck-error ((t (:background "mistyrose" :underline (:color "red" :style wave :position 0)))))
  '(flyspell-incorrect ((t (:background "mistyrose" :underline (:color "#D70000" :style wave :position nil)))))
+ '(orderless-match-face-0 ((t (:background "color-189" :foreground "color-25" :weight bold))))
  '(org-level-1 ((t (:background "LightSteelBlue1" :foreground "black" :weight bold :height 1.3))))
  '(org-level-2 ((t (:background "honeydew2" :foreground "black" :weight bold :height 1.2))))
  '(org-level-3 ((t (:background "lemonchiffon1" :foreground "black" :weight bold :height 1.1))))
