@@ -10,6 +10,9 @@ Once Emacs starts:
 M-x treestiter install language grammer
  > install rust
 
+M-x package-install
+ > dap-mode
+
 ```
 
 2. When it boots it will install any package which is neede. If this is fresh setup then it will take some time but it will setup all packages automatically.
