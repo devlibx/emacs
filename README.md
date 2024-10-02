@@ -13,6 +13,18 @@ M-x treestiter install language grammer
 M-x package-install
  > dap-mode
 
+
+# Rust specific things
+sudo apt update
+sudo apt install build-essential
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rust-analyzer
+
+```
+
+Important
+```shell
+Sometime you may see some error in install process. Do a package refresh and restart emacs again/
 ```
 
 2. When it boots it will install any package which is neede. If this is fresh setup then it will take some time but it will setup all packages automatically.
