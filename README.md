@@ -1,6 +1,17 @@
 ### Setup Help
 This is a custom Emacs setup for my own use. I has the followign setup:
 1. Create ~/.emacs.d directory and ```git clone https://github.com/devlibx/emacs.git .```
+
+```shell
+Install following:
+sudo apt-get install ripgrep ispell
+
+Once Emacs starts:
+M-x treestiter install language grammer
+ > install rust
+
+```
+
 2. When it boots it will install any package which is neede. If this is fresh setup then it will take some time but it will setup all packages automatically.
 3. Only one step is need at first time (Because i am using `doom-emacs` theam)
 ```shell

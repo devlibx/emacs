@@ -24,9 +24,9 @@
 (use-package yasnippet
   :ensure t
   :init
+  :config
   ;; Enable yasnippet globally
   (yas-global-mode 1)
-  :config
   ;; Ensure yasnippet is enabled in programming modes
   (add-hook 'prog-mode-hook #'yas-minor-mode)
   )

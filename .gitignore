@@ -16,3 +16,4 @@ smex-items
 .cache
 test.org
 tree-sitter/
+eln-cache/

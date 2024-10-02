@@ -11,7 +11,9 @@
 
 ;; Install and configure `vertico` for vertical completion
 (use-package vertico
+  :ensure t
   :init
+  :config
   (vertico-mode))
 
 
