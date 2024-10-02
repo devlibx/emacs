@@ -13,8 +13,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(completions-common-part ((t nil)))
  '(flycheck-error ((t (:background "mistyrose" :underline (:color "red" :style wave :position 0)))))
- '(flyspell-incorrect ((t (:background "mistyrose" :underline (:color "#D70000" :style wave :position nil))))))
+ '(flyspell-incorrect ((t (:background "mistyrose" :underline (:color "#D70000" :style wave :position nil)))))
+ '(org-level-1 ((t (:background "LightSteelBlue1" :foreground "black" :weight bold :height 1.3))))
+ '(org-level-2 ((t (:background "honeydew2" :foreground "black" :weight bold :height 1.2))))
+ '(org-level-3 ((t (:background "lemonchiffon1" :foreground "black" :weight bold :height 1.1))))
+ '(org-level-4 ((t (:background "mistyrose" :foreground "black" :weight bold :height 1.05)))))
 
 
 ;; Initialize package sources
