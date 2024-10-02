@@ -1,3 +1,4 @@
+0
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -16,7 +17,9 @@
  '(completions-common-part ((t nil)))
  '(flycheck-error ((t (:background "mistyrose" :underline (:color "red" :style wave :position 0)))))
  '(flyspell-incorrect ((t (:background "mistyrose" :underline (:color "#D70000" :style wave :position nil)))))
- '(orderless-match-face-0 ((t (:background "color-189" :foreground "color-25" :weight bold))))
+ '(orderless-match-face-0 ((t (:background "darkseagreen1" :foreground "#183969" :weight bold))))
+ '(orderless-match-face-1 ((t (:background "palegreen1" :foreground "#6f0643" :weight bold))))
+ '(orderless-match-face-2 ((t (:background "green2" :foreground "#063f0a" :weight bold))))
  '(org-level-1 ((t (:background "LightSteelBlue1" :foreground "black" :weight bold :height 1.3))))
  '(org-level-2 ((t (:background "honeydew2" :foreground "black" :weight bold :height 1.2))))
  '(org-level-3 ((t (:background "lemonchiffon1" :foreground "black" :weight bold :height 1.1))))
