@@ -27,6 +27,15 @@ Important
 Sometime you may see some error in install process. Do a package refresh and restart emacs again/
 ```
 
+Some important settings in bashrc file - added some alias to start/stop emacs in daemon mode
+```shell
+# Emacs
+alias ek='emacsclient -e "(kill-emacs)"'
+alias ekd='emacsclient -e "(kill-emacs)" && emacs --daemon'
+alias ed='emacs --daemon'
+alias ec="emacsclient -nw"
+```
+
 2. When it boots it will install any package which is neede. If this is fresh setup then it will take some time but it will setup all packages automatically.
 3. Only one step is need at first time (Because i am using `doom-emacs` theam)
 ```shell
