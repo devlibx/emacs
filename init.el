@@ -1,4 +1,8 @@
-0
+
+;; This is a special case - in case of ubuntu we may need this 
+(when (eq system-type 'gnu/linux)
+  (global-set-key (kbd "M-X") 'execute-extended-command))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
