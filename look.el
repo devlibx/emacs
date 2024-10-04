@@ -22,6 +22,11 @@
   (load-theme 'doom-acario-light t)
   (doom-themes-visual-bell-config))
 
+(use-package material-theme
+  :ensure t
+  :config
+  (load-theme 'material t))  
+
 ;; Cursor settings
 (set-cursor-color "#71368A")
 (use-package beacon
