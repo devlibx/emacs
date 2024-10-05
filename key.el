@@ -20,3 +20,11 @@
 
 ;; Change the behavior of C-k to kill the whole line
 (global-set-key (kbd "C-k") 'kill-whole-line)
+
+
+(use-package keycast
+  :ensure t
+  :config
+  ;; Enable keycast mode to show key presses in the mode-line (footer)
+  (add-to-list 'global-mode-string '("" keycast-mode-line))
+  (keycast-mode-line-mode))
