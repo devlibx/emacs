@@ -60,3 +60,5 @@
           (lambda ()
             (flyspell-prog-mode)
             (flyspell-buffer)))
+(setq ispell-dictionary "english")
+(setq ispell-personal-dictionary "~/.emacs.d/.aspell.en.pws") ;; Path to your personal dictionary
