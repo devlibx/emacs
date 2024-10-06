@@ -16,3 +16,12 @@
   (dap-mode 1)
   (dap-ui-mode 1))
 
+
+;; Add hydra mode
+(use-package hydra
+  :ensure t)
+
+
+(custom-set-faces
+ '(dap-breakpoint-face ((t (:foreground "red" :background nil :weight bold))))
+ '(dap-breakpoint-disabled-face ((t (:foreground "gray" :background nil :weight bold)))))
