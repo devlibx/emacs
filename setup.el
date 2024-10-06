@@ -62,3 +62,11 @@
             (flyspell-buffer)))
 ;; (setq ispell-dictionary "english")
 (setq ispell-personal-dictionary "~/.emacs.d/.aspell.en.pws") ;; Path to your personal dictionary
+
+
+;; Load local.el file when we go to prog-mode
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (let ((local-file (expand-file-name ".local.el" default-directory)))
+              (when (file-exists-p local-file)
+                (load-file local-file)))))
