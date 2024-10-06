@@ -35,6 +35,7 @@
   :group 'dap-lldb
   :type 'symbol)
 
+;; This is the setting which is the main entry for lldb-vscode
 (defun dap-lldb--populate-start-file-args (conf)
   "Populate CONF with the required arguments."
   (-> conf
@@ -46,24 +47,22 @@
                                      (funcall dap-lldb-debugged-program-function)))
       (dap--put-if-absent :name "LLDB Debug")))
 
-
-(defun dap-lldb-nonvscode--populate-start-file-args (conf)
+;; This is the setting which is the main entry for lldb-tests
+;; This is added so that it can ask for test program
+(defun dap-lldb-test--populate-start-file-args (conf)
   "Populate CONF with the required arguments."
   (-> conf
       (dap--put-if-absent :dap-server-path dap-lldb-debug-program)
-      (dap--put-if-absent :type "lldb")
+      (dap--put-if-absent :type "lldb-test")
       (dap--put-if-absent :cwd default-directory)
-      (dap--put-if-absent :program (if (commandp dap-lldb-debugged-program-function)
-                                       (call-interactively dap-lldb-debugged-program-function)
-                                     (funcall dap-lldb-debugged-program-function)))
+      (dap--put-if-absent :program (read-file-name "Select test program: "))
       (dap--put-if-absent :name "LLDB Debug")))
+
 
 (eval-after-load "dap-mode"
   '(progn
      (dap-register-debug-provider "lldb-vscode" 'dap-lldb--populate-start-file-args)
-     (dap-register-debug-provider "lldb" 'dap-lldb-nonvscode--populate-start-file-args)
-     ))
-
+     (dap-register-debug-provider "lldb-test" 'dap-lldb-test--populate-start-file-args)))
 
 (provide 'dap-lldb)
 ;;; dap-lldb.el ends here
