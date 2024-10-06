@@ -18,7 +18,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(breakpoint-enabled ((t (:background "palegreen1"))))
  '(completions-common-part ((t nil)))
+ '(dap-breakpoint-disabled-face ((t (:foreground "gray" :background nil :weight bold))))
+ '(dap-breakpoint-face ((t (:foreground "red" :background nil :weight bold))))
+ '(dap-ui-verified-breakpoint-face ((t (:background "wheat" :foreground "black"))))
  '(flycheck-error ((t (:background "mistyrose" :underline (:color "red" :style wave :position 0)))))
  '(flyspell-incorrect ((t (:background "mistyrose" :underline (:color "#D70000" :style wave :position nil)))))
  '(orderless-match-face-0 ((t (:background "darkseagreen1" :foreground "#183969" :weight bold))))
