@@ -12,7 +12,8 @@
  '(custom-safe-themes
    '("01a2182944a92712679687cc2494c81be37a013650f337dcc33be0e001bfbed1" "87de2a48139167bfe19e314996ee0a8d081a6d8803954bafda08857684109b4e" "bb0f3ae2f6f6f6dbbbe03df66d74ca0aecefa6723ac1686f421dd1ffe26b71c3" "4e2e42e9306813763e2e62f115da71b485458a36e8b4c24e17a2168c45c9cf9d" "a138ec18a6b926ea9d66e61aac28f5ce99739cf38566876dc31e29ec8757f6e2" default))
  '(package-selected-packages
-   '(immaterial-theme beacon yaml-mode vertico-posframe key-chord consult-lsp cargo-mode cargo consult-ag tail company-lsp treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs multiple-cursors magit marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes)))
+   '(immaterial-theme beacon yaml-mode vertico-posframe key-chord consult-lsp cargo-mode cargo consult-ag tail company-lsp treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs multiple-cursors magit marginalia orderless consult vertico company format-all elisp-format lsp-mode doom-themes))
+ '(rustic-cargo-test-exec-command "test"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,3 +78,4 @@
 (load-file (expand-file-name "lang/dap/setup.el" emacs-base-dir))
 (load-file (expand-file-name "lang/dap/rust.el" emacs-base-dir))
 (load-file (expand-file-name "lang/treesitter.el" emacs-base-dir))
+(load-file (expand-file-name "lisp/dap-mode/dap-lldb.el" emacs-base-dir))
