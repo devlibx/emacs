@@ -21,7 +21,7 @@
 (use-package hydra
   :ensure t)
 
-
-(custom-set-faces
- '(dap-breakpoint-face ((t (:foreground "red" :background nil :weight bold))))
- '(dap-breakpoint-disabled-face ((t (:foreground "gray" :background nil :weight bold)))))
+;; Automatically open DAP Hydra when debugging starts
+(add-hook 'dap-session-created-hook
+          (lambda (session)
+            (dap-hydra)))
