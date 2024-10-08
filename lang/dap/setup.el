@@ -25,3 +25,24 @@
 (add-hook 'dap-session-created-hook
           (lambda (session)
             (dap-hydra)))
+
+
+
+;; Starts DAP mode to setup tooltip
+(require 'dap-ui)
+(dap-ui-mode 1)
+(dap-tooltip-mode 1)
+(tooltip-mode 1)
+(xterm-mouse-mode 1)
+
+
+;; Function to evaluate and show variable on click
+(defun dap-ui-show-variable-at-point ()
+  "Show value of variable at point."
+  (interactive)
+  (let ((variable (thing-at-point 'symbol t)))
+    (dap-ui-expressions-add variable)
+    (dap-ui-expressions-refresh)))
+
+;; Bind to mouse click (e.g., mouse-1 for left click)
+(global-set-key (kbd "<mouse-2>") 'dap-ui-show-variable-at-point)
