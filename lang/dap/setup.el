@@ -16,6 +16,8 @@
   (dap-mode 1)
   (dap-ui-mode 1))
 
+;; Enabling only some features
+(setq dap-auto-configure-features '(locals breakpoints  tooltip))
 
 ;; Add hydra mode
 (use-package hydra
@@ -25,7 +27,6 @@
 (add-hook 'dap-session-created-hook
           (lambda (session)
             (dap-hydra)))
-
 
 
 ;; Starts DAP mode to setup tooltip
