@@ -22,9 +22,10 @@
 (global-set-key (kbd "C-k") 'kill-whole-line)
 
 
-(use-package keycast
-  :ensure t
-  :config
-  ;; Enable keycast mode to show key presses in the mode-line (footer)
-  (add-to-list 'global-mode-string '("" keycast-mode-line))
-  (keycast-mode-line-mode))
+;; Issue with keycast - if I use this then the all things like LSP running, what analyzer is running etc. will not be shown
+;; (use-package keycast
+;;   :ensure t
+;;   :config
+;;   ;; Enable keycast mode to show key presses in the mode-line (footer)
+;;   (add-to-list 'global-mode-string '("" keycast-mode-line))
+;;   (keycast-mode-line-mode))
