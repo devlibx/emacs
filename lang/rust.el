@@ -25,10 +25,8 @@
 ;; Setup rustic
 (use-package rustic
   :ensure t
+  :hook (rustic-mode . flycheck-mode)
   :custom
-
-  ;; Use Clippy as the default cargo check command
-  (rustic-cargo-check-arguments "--clippy")
 
   ;; Enable autoformatting on save
   (rustic-format-on-save t)
@@ -48,24 +46,21 @@
   ;; Enable Flycheck for syntax checking
   (add-hook 'rustic-mode-hook 'flycheck-mode))
 
-
 ;; Have Cargo packages
 (use-package cargo
   :ensure t
   :config
   (add-hook 'rust-mode-hook 'cargo-minor-mode))
 
-;; TODO - Delete this => This will find the sub module in the rust workspace project. Delete it if it is not used
-;; Setup cargo command to run this workspace
-;; This will find all the modules from the workspace and allow us to pick one
-;; (require 'cargo)
-;; (defun my-cargo-run-package ()
-;;   "List and run a specific Cargo package from the workspace."
-;;   (interactive)
-;;   (let* ((default-directory (locate-dominating-file default-directory "Cargo.toml"))
-;;          (packages (split-string
-;;                     (shell-command-to-string "cargo metadata --no-deps --format-version 1 | jq -r '.packages[].name'")
-;;                     "\n" t))
-;;          (package (completing-read "Select package: " packages)))
-;;     (compile (concat "cargo run --package " package))))
+;; Add flycheck-rust for Rust syntax checking
+(use-package flycheck-rust
+  :ensure t
+  :after (flycheck rustic)
+  :hook (flycheck-mode . flycheck-rust-setup))
 
+;; Added Flycheck for Rust
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)  ;; Enable Flycheck globally
+  :config
+  (add-to-list 'flycheck-checkers 'rustic-clippy))
