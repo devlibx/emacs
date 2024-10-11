@@ -67,7 +67,7 @@
   :ensure t
   :init (global-flycheck-mode)  ;; Enable Flycheck globally
   :config
-  (add-to-list 'flycheck-checkers 'rustic-clippy)
+  (add-to-list 'flycheck-checkers 'rustic-clippy))
 
 ;;; rust.el ends here)
-  
+
