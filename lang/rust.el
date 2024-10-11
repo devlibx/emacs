@@ -1,4 +1,8 @@
-;; Install rust-mode or rustic
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
+
+
 (use-package rust-mode
   :init
   (setq rust-mode-treesitter-derive t)
@@ -34,7 +38,7 @@
   ;; Start - Customize Rust Analyzer settings
   
   ;; Ensure rust-analyzer is used
-  (rustic-analyzer-command '("rust-analyzer")) 
+  (rustic-analyzer-command '("rust-analyzer"))
 
   ;; Use lsp-mode with rustic
   (setq rustic-lsp-client 'lsp-mode)
@@ -63,4 +67,7 @@
   :ensure t
   :init (global-flycheck-mode)  ;; Enable Flycheck globally
   :config
-  (add-to-list 'flycheck-checkers 'rustic-clippy))
+  (add-to-list 'flycheck-checkers 'rustic-clippy)
+
+;;; rust.el ends here)
+  
