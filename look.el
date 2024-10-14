@@ -1,3 +1,11 @@
+;;; look.el --- setup look and feel -*- lexical-binding: t; -*-
+;;; Commentary:
+;; This file sets up the look and feel of the editor.
+
+;;; Code:
+
+;; Set the default tab width (optional, default is 4)
+(setq-default tab-width 4)
 
 ;; Auto scrool the logs[O]
 (setq compilation-scroll-output t)
@@ -55,3 +63,7 @@
 (set-face-attribute 'header-line nil :foreground "black" :background "white")  ;; Adjust as needed
 
 ;; ----------------------------------------------------------------------------------------------------------
+
+;;; look.el ends here
+
+
