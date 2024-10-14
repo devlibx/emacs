@@ -22,6 +22,22 @@
 (global-set-key (kbd "C-k") 'kill-whole-line)
 
 
+;; Set custom key bindings for prog-mode
+(defun my-prog-mode-set-keys ()
+  "Set custom key bindings for prog-mode."
+  (local-set-key (kbd "M-/") 'comment-dwim) ; Bind M-/ for commenting
+  ) 
+
+;; Unset custom key bindings for prog-mode
+(defun my-prog-mode-unset-keys ()
+  "Unset custom key bindings for prog-mode."
+  (local-unset-key (kbd "M-/")) ; Unbind M-/
+  ) 
+
+;; Add hooks to set and unset custom key bindings for prog-mode
+(add-hook 'prog-mode-hook 'my-prog-mode-set-keys) 
+(add-hook 'kill-buffer-hook 'my-prog-mode-unset-keys)
+
 ;; Issue with keycast - if I use this then the all things like LSP running, what analyzer is running etc. will not be shown
 ;; (use-package keycast
 ;;   :ensure t
