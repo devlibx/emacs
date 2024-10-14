@@ -25,7 +25,7 @@
 ;; Set custom key bindings for prog-mode
 (defun my-prog-mode-set-keys ()
   "Set custom key bindings for prog-mode."
-  (local-set-key (kbd "M-/") 'comment-dwim) ; Bind M-/ for commenting
+  (local-set-key (kbd "M-/") 'comment-line)
   ) 
 
 ;; Unset custom key bindings for prog-mode
