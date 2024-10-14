@@ -1,36 +1,50 @@
+;;; custom_command.el --- My custom commands -*- lexical-binding: t; -*-
+;;; Commentary:
+;; I have defined some custom commands here which is use frequently.
+
+;;; Code:
+
+;; List all code errors using lsp server
+(defun err()
+  "This will show lsp errors from current buffer."
+  (interactive)
+  (flycheck-list-errors))
+
 ;; Copy selected context - this will go to clipboard
-(defun copy () (interactive)
-       (let ((deactivate-mark t))
-	 (call-process-region (point) (mark) "pbcopy")))
+(defun copy ()
+  "This will copy the selected text to clipboard."
+  (interactive)
+  (let ((deactivate-mark t))
+	(call-process-region (point) (mark) "pbcopy")))
 
 ;; Git clean any change in local dir
 ;; Delete files and dir
 (defun git-clean () (interactive)
-       (shell-command "git clean -f -d; git checkout .;"))
+	   (shell-command "git clean -f -d; git checkout .;"))
 
 ;; Git commit with ammend
 (defun git-commit-amend () (interactive)
-       (shell-command "git add .;  git commit --amend --no-edit"))
+	   (shell-command "git add .;  git commit --amend --no-edit"))
 
 ;; Git command short-cuts
 (defun commit () (interactive) (magit-commit-create))
 
 ;; Helper to format json and copy to clipboard
 (defun json-pretty-and-copy() (interactive)
-       (json-pretty-print (region-beginning) (region-end))
-       (copy)
-       )
+	   (json-pretty-print (region-beginning) (region-end))
+	   (copy)
+	   )
 
 ;; Kill all buffer will kill all the open buffers
 ;; Here we loop through all buffers and kill them at one shot
 (defun kill-all-buffers ()
   (interactive)
   (let ((buffers (buffer-list))
-	(buffer-name nil)) 
-    (while buffers
-      (setq buffer-name (buffer-name (car buffers)))
-      (kill-buffer buffer-name)
-      (setq buffers (cdr buffers)))))
+		(buffer-name nil)) 
+	(while buffers
+	  (setq buffer-name (buffer-name (car buffers)))
+	  (kill-buffer buffer-name)
+	  (setq buffers (cdr buffers)))))
 
 ;; A shortcut for kill all buffer 
 (defun kab () (interactive) (kill-all-buffers))
@@ -46,3 +60,5 @@
   "Invoke flyspell-correct-wrapper."
   (interactive)
   (flyspell-correct-wrapper))
+
+;;; custom_command.el ends here
