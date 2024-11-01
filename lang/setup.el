@@ -31,3 +31,10 @@
   (add-hook 'prog-mode-hook #'yas-minor-mode)
   )
 
+
+;; Remove unused imports in Rust
+(defun unused-imports ()
+  "Remove unused imports in the current Rust file using `cargo fix`."
+  (interactive)
+  (when (eq major-mode 'rustic-mode)
+    (rustic-run-cargo-command "cargo fix --allow-dirty --allow-staged")))

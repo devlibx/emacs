@@ -15,15 +15,6 @@
   (setq rustic-format-trigger 'on-save)
   (setq rustic-format-display-method 'display-buffer)
   (setq lsp-rust-analyzer-cargo-watch-command "clippy")
-
-  ;; Commented below to use above rustic-formate-trigger (29 Sept 2024) = TODO - delete it if auto-formatting is working
-  ;; Use rust analyzer
-  ;; (setq lsp-rust-analyzer-server-command '("rust-analyzer"))
-  ;; Formate code on save with lsp-format
-  ;; (add-hook 'lsp-mode-hook
-  ;;           (lambda ()
-  ;;             (when (derived-mode-p 'rust-mode)
-  ;;               (add-hook 'before-save-hook #'lsp-format-buffer nil 'local))))
   )
 
 
