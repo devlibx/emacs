@@ -22,6 +22,10 @@
 (defun git-clean () (interactive)
 	   (shell-command "git clean -f -d; git checkout .;"))
 
+;; Git commit no message
+(defun git-commit-no-message () (interactive)
+	   (shell-command "git add .; git commit -m \"[*] incremental change \"; git push"))
+
 ;; Git commit with ammend
 (defun git-commit-amend () (interactive)
 	   (shell-command "git add .;  git commit --amend --no-edit"))

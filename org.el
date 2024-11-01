@@ -1,3 +1,8 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
+;;; Org mode configuration
+
 (use-package org
   :mode ("\\.org\\'" . org-mode))
 
@@ -42,3 +47,6 @@
  '(org-level-3 ((t (:background "lemonchiffon1" :foreground "black" :weight bold :height 1.1))))
  ;; Customize level 4 heading
  '(org-level-4 ((t (:background "mistyrose" :foreground "black" :weight bold :height 1.05)))))
+
+;;; org.el ends here
+
