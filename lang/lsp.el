@@ -14,6 +14,12 @@
   ;; (lsp-rust-analyzer-display-closure-return-type-hints t)
   ;; (lsp-rust-analyzer-display-parameter-hints nil)
   ;; (lsp-rust-analyzer-display-reborrow-hints nil)
+
+
+  :config
+  ;; IMP - In the program mode we have types for each variable e.g. let x = 10;
+  ;; But if we want to see its type like let x : i32 = 10; then we can enable this
+  (setq lsp-inlay-hint-enable nil)
   
   :bind
   (:map lsp-mode-map ("M-RET" . lsp-execute-code-action)))
