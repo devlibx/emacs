@@ -17,8 +17,8 @@
   ;; When restic formats the buffer, it shows what the results in a new buffer - for now I do not
   ;; want to display the results - I am ok just to format
   ;; setting it nil - to see result set 'display-buffer
-  ;; (setq rustic-format-display-method 'display-buffer)
-  (setq rustic-format-display-method nil)
+  (setq rustic-format-display-method 'display-buffer)
+  ;;  (setq rustic-format-display-method nil)
 
   (setq lsp-rust-analyzer-cargo-watch-command "clippy")
   )
