@@ -1,4 +1,4 @@
-					; Treemacs 
+										; Treemacs 
 (use-package treemacs
   :ensure t
   :defer t
@@ -29,6 +29,7 @@
           treemacs-max-git-entries                 5000
           treemacs-missing-project-action          'ask
           treemacs-move-forward-on-expand          nil
+		  treemacs-persist-mode                    -1      ;; HB - modified it to not persist last dir - may not be working
           treemacs-no-png-images                   nil
           treemacs-no-delete-other-windows         t
           treemacs-project-follow-cleanup          nil
