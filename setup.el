@@ -22,7 +22,7 @@
   :config
   (projectile-mode +1)
   (setq projectile-project-search-path
-	'("/Users/harishbohara/workplace/personal" "/Users/harishbohara/workplace")))
+		'("/Users/harishbohara/workplace/personal" "/Users/harishbohara/workplace")))
 
 ;; Show which key help
 (use-package which-key
@@ -76,6 +76,7 @@
   (use-package editorconfig :ensure t)
   (add-to-list 'load-path "~/.emacs.d/copilot")
   (require 'copilot)
+  (setq warning-suppress-types '((copilot)))
   (add-hook 'prog-mode-hook 'copilot-mode)
   (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
   (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
