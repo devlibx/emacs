@@ -115,30 +115,24 @@
   :config (treemacs-set-scope-type 'Tabs))
 
 
-(defun my/treemacs-open-current-dir ()
-  "Open Treemacs and navigate to the directory of the current buffer."
-  (interactive)
-  (require 'treemacs)
-  ;; Open Treemacs if it's not already open
-  (unless (treemacs-is-treemacs-window-selected)
-    (treemacs))
-  ;; Navigate to the directory of the current buffer if there's a file
-  (when (buffer-file-name)
-    (let ((file-dir (file-name-directory (buffer-file-name))))
-      (treemacs-find-file (expand-file-name file-dir)))))
-
-
 (defun my/treemacs-open-on-startup ()
-  "Open Treemacs on startup and navigate to the current buffer's directory."
-  (require 'treemacs)
-  ;; Open Treemacs if it's not already open
-  (unless (treemacs-get-local-window)
-    (treemacs))
-  ;; Navigate to the directory of the current buffer if there's a file
-  (when (buffer-file-name)
-    (let ((file-dir (file-name-directory (buffer-file-name))))
-      (treemacs-find-file (expand-file-name file-dir)))))
+  "Open Treemacs on startup showing ONLY the current directory."
+  (interactive)
+  (let ((persist-file (expand-file-name ".cache/treemacs-persist" user-emacs-directory))
+        (current-dir default-directory))
+    ;; Delete persist file to ensure clean state
+    (when (file-exists-p persist-file)
+      (delete-file persist-file))
+    (when (and current-dir (file-directory-p current-dir))
+      (let ((project-name (file-name-nondirectory (directory-file-name current-dir))))
+        ;; Initialize treemacs first to ensure proper setup
+        (treemacs)
+        ;; Wait a moment for treemacs to initialize
+        (run-with-timer 0.1 nil
+                        (lambda ()
+                          ;; Now show only the current directory
+                          (treemacs--show-single-project current-dir project-name)))))))
 
 ;; Run the function after Emacs has finished loading
-(add-hook 'emacs-startup-hook 'my/treemacs-open-on-startup)
+(add-hook 'emacs-startup-hook #'my/treemacs-open-on-startup)
 

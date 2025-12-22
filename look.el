@@ -33,7 +33,9 @@
 (use-package material-theme
   :ensure t
   :config
-  (load-theme 'material-light t))  
+  (load-theme 'material-light t))
+  ;; Note: Theme may show some face attribute warnings - these are harmless
+  ;; and come from the theme itself. They don't affect functionality.
 
 ;; Cursor settings
 (set-cursor-color "#71368A")

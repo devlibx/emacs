@@ -21,8 +21,8 @@
  ;; If there is more than one, they won't work right.
  '(breakpoint-enabled ((t (:background "palegreen1"))))
  '(completions-common-part ((t nil)))
- '(dap-breakpoint-disabled-face ((t (:foreground "gray" :background nil :weight bold))))
- '(dap-breakpoint-face ((t (:foreground "red" :background nil :weight bold))))
+ '(dap-breakpoint-disabled-face ((t (:foreground "gray" :background unspecified :weight bold))))
+ '(dap-breakpoint-face ((t (:foreground "red" :background unspecified :weight bold))))
  '(dap-ui-verified-breakpoint-face ((t (:background "wheat" :foreground "black"))))
  '(flycheck-error ((t (:background "mistyrose" :underline (:color "red" :style wave :position 0)))))
  '(flyspell-incorrect ((t (:background "mistyrose" :underline (:color "#D70000" :style wave :position nil)))))
