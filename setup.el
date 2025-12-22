@@ -71,13 +71,4 @@
               (when (file-exists-p local-file)
                 (load-file local-file)))))
 
-;; Check if Emacs is running on macOS -- Setup Copilot
-(when (eq system-type 'darwin)
-  (use-package editorconfig :ensure t)
-  (add-to-list 'load-path "~/.emacs.d/copilot")
-  (require 'copilot)
-  (setq warning-suppress-types '((copilot)))
-  (add-hook 'prog-mode-hook 'copilot-mode)
-  (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
-  (define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
-  (setq copilot-idle-delay 0.1))
+
